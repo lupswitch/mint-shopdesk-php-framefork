@@ -28,7 +28,7 @@
 	}
 
 	// Required Files
-	include APPPATH.'/system/functions.php';
+	require APPPATH.'/system/functions.php';
 	require APPPATH.'/system/Controller.php';
 
 	// Route
