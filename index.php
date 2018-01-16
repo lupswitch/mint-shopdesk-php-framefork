@@ -11,15 +11,16 @@
 	$GLOBALS['config']['request_url'] = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 	$GLOBALS['config']['base_path'] = substr($GLOBALS['config']['request_url'], 0, strpos($GLOBALS['config']['request_url'],$GLOBALS['config']['base_file']));
 	$GLOBALS['config']['base_url'] = $GLOBALS['config']['base_path'].'index.php/'; 
+	$GLOBALS['config']['asset_url'] = $GLOBALS['config']['base_path']; 
 
 	// Encryption Key
 	$GLOBALS['config']['encryption_key'] = 'a1a7d65cea216c5477b20495bb0b814fe2b40cb8';
 
 	// Database
-	$GLOBALS['config']['db']['host'] = 'localhost';
+	$GLOBALS['config']['db']['host'] = 'localhost:8889';
 	$GLOBALS['config']['db']['username'] = 'root';
-	$GLOBALS['config']['db']['password'] = '';
-	$GLOBALS['config']['db']['database'] = 'cartify';
+	$GLOBALS['config']['db']['password'] = 'root';
+	$GLOBALS['config']['db']['database'] = 'apithon';
 
 	$GLOBALS['db_connection'] = mysqli_connect($GLOBALS['config']['db']['host'],$GLOBALS['config']['db']['username'],$GLOBALS['config']['db']['password'],$GLOBALS['config']['db']['database']);
 

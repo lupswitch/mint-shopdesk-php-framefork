@@ -1,10 +1,13 @@
 <?php
 
 	class Home extends Controller{
+		public function __construct() {
+			require_auth();
+		}
 		public function index () {
 			echo 'Home index';
 		}
-		public function userName ($n) {
+		public function username ($n) {
 			$this->json(array('name' => $n));
 		}
 		public function profile() {
@@ -12,7 +15,13 @@
 			$tmp->my();
 			$name = $this->input_get('name');
 			$this->view('profile', array('name'=>$name));
-			sd_redirect(sd_base_url('home/username/khizer'));
+			#sd_redirect(sd_base_url('?route=home/username/khizer'));
 
+		}
+		public function basic() {
+			$this->json([
+				'status' => true,
+				'message' => "Authenticated"
+			]);
 		}
 	}
