@@ -1,9 +1,6 @@
 <?php
 
 	class Home extends Controller{
-		public function __construct() {
-			require_auth();
-		}
 		public function index () {
 			echo 'Home index';
 		}
@@ -19,6 +16,7 @@
 
 		}
 		public function basic() {
+			require_auth();
 			$this->json([
 				'status' => true,
 				'message' => "Authenticated"

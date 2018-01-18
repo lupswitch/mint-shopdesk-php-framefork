@@ -25,11 +25,11 @@ class Controller {
 		return new $file['file'];
 	}
 	public function input_post($key) {
-		isset($_POST[$key]) ? $r = addslashes($_POST[$key]): $r = null;
+		isset($_POST[$key]) ? $r = addslashes_res($_POST[$key]): $r = null;
 		return $r;
 	}
 	public function input_get($key) {
-		isset($_GET[$key]) ? $r = addslashes($_GET[$key]): $r = null;
+		isset($_GET[$key]) ? $r = addslashes_rec($_GET[$key]): $r = null;
 		return $r;
 	}
 }

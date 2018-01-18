@@ -51,3 +51,11 @@ function require_auth() {
 		exit;
 	}
 }
+function addslashes_rec( $data ){
+    if ( is_array( $data ) ) {
+        return array_map( 'addslashes', $data );
+    }
+    else {
+        return addslashes( $data );
+    }
+}  
