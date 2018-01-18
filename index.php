@@ -25,7 +25,11 @@
 	$GLOBALS['db_connection'] = mysqli_connect($GLOBALS['config']['db']['host'],$GLOBALS['config']['db']['username'],$GLOBALS['config']['db']['password'],$GLOBALS['config']['db']['database']);
 
 	if (mysqli_connect_errno()) {
-		die("Failed to connect to MySQL: " . mysqli_connect_error());
+		header('Content-Type: application/json');
+		die(json_encode([
+			'status' => false,
+			'message'=>"Failed to connect to MySQL: " . mysqli_connect_error()
+		]));
 	}
 
 	// Required Files
@@ -47,7 +51,11 @@
 	// Create instance
 	$obj = sd_require_file('controllers', $route[0]);
 	if(!$obj) {
-		die('not a valid controller');
+		header('Content-Type: application/json');		
+		die(json_encode([
+			'status' => false,
+			'message'=>"Not a valid controller"
+		]));
 	}
 	else {
 		require $obj['path'];
@@ -64,7 +72,11 @@
 	// Call method
 	$method = $method."_".strtolower($_SERVER['REQUEST_METHOD']);
 	if(!method_exists($instance, $method)) {
-		die('method <tt>"'.$obj['file'].'::'.$method.'()"</tt> does not exist');
+		header('Content-Type: application/json');		
+		die(json_encode([
+			'status' => false,
+			'message'=>'method "'.$obj['file'].'::'.$method.'()" does not exist'
+		]));
 	}
 	$paramCheck = new ReflectionMethod($instance, $method);
 	$paramCheck = $paramCheck->getNumberOfRequiredParameters();

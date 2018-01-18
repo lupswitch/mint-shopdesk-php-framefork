@@ -25,7 +25,7 @@
 			echo $this->json($this->db_query('SELECT * FROM `users` WHERE 1'));
 			// echo $this->json($this->db_query('INSERT INTO `categories`(`category_name`, `user_id`) VALUES ("hello", "10")'));
 		}
-		public function headers_get () {
+		public function headers_post () {
 			$this->json(sd_headers());
 		}
 	}
