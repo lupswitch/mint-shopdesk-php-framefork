@@ -62,6 +62,7 @@
 	}
 
 	// Call method
+	$method = $method."_".strtolower($_SERVER['REQUEST_METHOD']);
 	if(!method_exists($instance, $method)) {
 		die('method <tt>"'.$obj['file'].'::'.$method.'()"</tt> does not exist');
 	}

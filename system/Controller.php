@@ -32,4 +32,19 @@ class Controller {
 		isset($_GET[$key]) ? $r = addslashes_rec($_GET[$key]): $r = null;
 		return $r;
 	}
+	public function db_query($q, $arr=[]) {
+		$res = $GLOBALS['db_connection']->query($q);
+		$new_array;
+		$tmp = mysqli_fetch_array($res,MYSQLI_ASSOC);
+		if(is_array($tmp)) {
+			foreach($res as $r) {
+				$new_array[] = $r;
+			}
+		}
+		else {
+			$new_array = $res;
+		}
+
+		return $new_array;
+	}
 }
