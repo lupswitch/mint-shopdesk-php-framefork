@@ -54,9 +54,7 @@
         <hr>
         <div class="sd-card" id="#basic">
             <h5>Basic</h5>
-            <tt>/index.php/{{controller}}/{{method}}/{{params}}</tt>
-            <br>
-            <br>
+            <p><code>/index.php/{{controller}}/{{method}}/{{params}}</code></p>
             <p><b>Note:</b> Every file made should have first letter uppercase</p>
             <table class="table table-striped">
                 <tr>
