@@ -16,7 +16,8 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#" style="border-right: 2px solid #ccc; padding-right: 25px;"><i class="fa fa-envira"></i> Mint Framework</a>
+        <a class="navbar-brand" href="#" ><i class="fa fa-envira"></i> Mint Framework</a>
+        <a class="navbar-brand hidden-sm-down" style="border-right: 2px solid #ccc; padding-right: 10px;">&nbsp</a> 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -33,7 +34,7 @@
                     <a class="nav-link" href="#controllers">Controllers</a>
                 </li> -->
                 <li class="nav-item">
-                    <a class="nav-link" href="https://gitlab.com/mkhizeryounas/shopdesk-mini-php-framework" target="_BLANK"><i class="fa fa-gitlab"></i> Download</a>
+                    <a class="nav-link  " href="https://gitlab.com/mkhizeryounas/shopdesk-mini-php-framework" target="_BLANK"><i class="fa fa-gitlab"></i> Download</a>
                 </li>
                 <!-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
