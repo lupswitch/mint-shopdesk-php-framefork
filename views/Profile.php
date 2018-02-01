@@ -4,4 +4,4 @@
 <?php
 	// echo sd_hash('213');
 	#sd_redirect(sd_base_url('home/username/khizer'));
-?>	
+?>	  

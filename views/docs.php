@@ -66,7 +66,7 @@
                 <tr>
                     <td><tt>APPPATH</tt></td>
                     <td>Returns current working directory</td>
-                </tr>
+                </tr> 
             </table>
         </div>
         <div class="sd-card" id="#functions">
