@@ -1,6 +1,9 @@
 <?php
 
 class Controller {
+	function __construct() {
+		
+	}
 	public function json($data) {
 		header('Content-Type: application/json');
 		if(!is_array($data))
@@ -11,7 +14,11 @@ class Controller {
 	public function view($viewname, $data = array()) {
 		$file = sd_require_file('views',$viewname);
 		if(!$file) {
-			die('no view found');
+			header('Content-Type: application/json');
+			die(json_encode([
+				'status' => false,
+				'message'=>"View not found" 
+			]));
 		}
 		extract($data);
 		require $file['path'];

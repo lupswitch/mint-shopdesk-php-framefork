@@ -6,11 +6,13 @@
 	}
 
 	$GLOBALS['config'] = array();
+	
 	$GLOBALS['config']['base_file'] = 'index.php';
-	$GLOBALS['config']['default_route']='home';
+	$GLOBALS['config']['default_route']='pages';
+
 	$GLOBALS['config']['request_url'] = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 	$GLOBALS['config']['base_path'] = substr($GLOBALS['config']['request_url'], 0, strpos($GLOBALS['config']['request_url'],$GLOBALS['config']['base_file']));
-	$GLOBALS['config']['base_url'] = $GLOBALS['config']['base_path'].'index.php/'; 
+	$GLOBALS['config']['base_url'] = $GLOBALS['config']['base_path'].$GLOBALS['config']['base_file'].'/'; 
 	$GLOBALS['config']['asset_url'] = $GLOBALS['config']['base_path']; 
 
 	// Encryption Key
@@ -70,12 +72,21 @@
 	}
 
 	// Call method
-	$method = $method."_".strtolower($_SERVER['REQUEST_METHOD']);
+	// $method = $method."_".strtolower($_SERVER['REQUEST_METHOD']);
+
+	if(strtolower($_SERVER['REQUEST_METHOD']) == 'options') { // CORES ENABLED
+		header('Content-Type: application/json');		
+		die(json_encode([
+			'status' => true,
+			'message'=>'Success'
+		]));		
+	}
+
 	if(!method_exists($instance, $method)) {
 		header('Content-Type: application/json');		
 		die(json_encode([
 			'status' => false,
-			'message'=>'method "'.$obj['file'].'::'.$method.'()" does not exist'
+			'message'=>'method '.$obj['file'].'::'.$method.'() does not exist'
 		]));
 	}
 	$paramCheck = new ReflectionMethod($instance, $method);

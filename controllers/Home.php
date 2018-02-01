@@ -1,7 +1,7 @@
 <?php
 
 	class Home extends Controller{
-		public function index_get () {
+		public function index () {
 			echo 'Home index';
 		}
 		public function username ($n) {
