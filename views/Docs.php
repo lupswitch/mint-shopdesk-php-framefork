@@ -62,7 +62,7 @@
                     <th>Description</th>
                 </tr>
                 <tr>
-                    <td><tt>APPPATH</tt></td>
+                    <td><code>APPPATH</code></td>
                     <td>Returns current working directory</td>
                 </tr> 
             </table>
@@ -75,31 +75,31 @@
                     <th>Description</th>
                 </tr>
                 <tr>
-                    <td><tt>sd_base_url($str)</tt></td>
+                    <td><code>sd_base_url($str)</code></td>
                     <td>Returns base url of the app with index.php</td>
                 </tr>
                 <tr>
-                    <td><tt>sd_asset_url($str)</tt></td>
+                    <td><code>sd_asset_url($str)</code></td>
                     <td>Returns base url of the app without index.php</td>
                 </tr>
                 <tr>
-                    <td><tt>require_auth()</tt></td>
+                    <td><code>require_auth()</code></td>
                     <td>Adds a basic auth.</td>
                 </tr>
                 <tr>
-                    <td><tt>sd_hash($str)</tt></td>
+                    <td><code>sd_hash($str)</code></td>
                     <td>Returns the string with sha1 hash</td>
                 </tr>
                 <tr>
-                    <td><tt>sd_redirect($str)</tt></td>
+                    <td><code>sd_redirect($str)</code></td>
                     <td>Redirects the user to the given link</td>
                 </tr>
                 <tr>
-                    <td><tt>addslashes_rec($str = var|array)</tt></td>
+                    <td><code>addslashes_rec($str = var|array)</code></td>
                     <td>Filter the given variable or array for database ops</td>
                 </tr>
                 <tr>
-                    <td><tt>sd_headers()</tt></td>
+                    <td><code>sd_headers()</code></td>
                     <td>Returns requsted headers</td>
                 </tr>
                 
@@ -113,27 +113,27 @@
                     <th>Description</th>
                 </tr>
                 <tr>
-                    <td><tt>$this->json($array=[])</tt></td>
+                    <td><code>$this->json($array=[])</code></td>
                     <td>Sets Content-Type to application/json and returns JSON data</td>
                 </tr>
                 <tr>
-                    <td><tt>$this->view($viewname, $data=[])</tt></td>
+                    <td><code>$this->view($viewname, $data=[])</code></td>
                     <td>Renders the view of given filename in views folder</td>
                 </tr>
                 <tr>
-                    <td><tt>$this->model($modelname)</tt></td>
+                    <td><code>$this->model($modelname)</code></td>
                     <td>Loads and return a modal from the model directory</td>
                 </tr>
                 <tr>
-                    <td><tt>$this->input_post($key)</tt></td>
+                    <td><code>$this->input_post($key)</code></td>
                     <td>Returns a POST value of key and filters it</td>
                 </tr>
                 <tr>
-                    <td><tt>$this->input_get($key)</tt></td>
+                    <td><code>$this->input_get($key)</code></td>
                     <td>Returns a GET value of key and filters it</td>
                 </tr>
                 <tr>
-                    <td><tt>$this->db_query($query)</tt></td>
+                    <td><code>$this->db_query($query)</code></td>
                     <td>Runs a db query and return the results</td>
                 </tr>
                 
