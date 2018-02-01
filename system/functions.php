@@ -4,7 +4,7 @@ function sd_require_file($dir, $file) {
 	$controllers = scandir(APPPATH.'/'.$dir.'/');
 	if(in_array(ucfirst($file).'.php', $controllers) || in_array($file.'.php', $controllers)) {
 		return array(
-			'path' => APPPATH.$dir.'/'.$file.'.php', 
+			'path' => APPPATH.$dir.'/'.ucfirst($file).'.php', 
 			'file' => $file
 		);
 	}
