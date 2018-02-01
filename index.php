@@ -19,10 +19,7 @@
 	$GLOBALS['config']['encryption_key'] = 'a1a7d65cea216c5477b20495bb0b814fe2b40cb8';
 
 	// Database
-	$GLOBALS['config']['db']['host'] = 'localhost:8889';
-	$GLOBALS['config']['db']['username'] = 'root';
-	$GLOBALS['config']['db']['password'] = 'root';
-	$GLOBALS['config']['db']['database'] = 'apithon';
+	require APPPATH.'/system/db.php';
 
 	$GLOBALS['db_connection'] = mysqli_connect($GLOBALS['config']['db']['host'],$GLOBALS['config']['db']['username'],$GLOBALS['config']['db']['password'],$GLOBALS['config']['db']['database']);
 
