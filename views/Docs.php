@@ -33,7 +33,7 @@
                     <a class="nav-link" href="#controllers">Controllers</a>
                 </li> -->
                 <li class="nav-item">
-                    <a class="nav-link active" href="https://gitlab.com/mkhizeryounas/shopdesk-mini-php-framework" target="_BLANK"><i class="fa fa-gitlab"></i> Download</a>
+                    <a class="nav-link" href="https://gitlab.com/mkhizeryounas/shopdesk-mini-php-framework" target="_BLANK"><i class="fa fa-gitlab"></i> Download</a>
                 </li>
                 <!-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
