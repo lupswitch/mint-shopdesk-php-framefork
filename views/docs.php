@@ -10,6 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="<?php echo sd_asset_url('assets/js/main.js') ?>"></script>
     <link rel="stylesheet" href="<?php echo sd_asset_url('assets/css/main.css') ?>">
 </head>
@@ -22,7 +23,7 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link" href="#basic">Basic</a>
                 </li>
                 <li class="nav-item">
@@ -30,6 +31,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#controllers">Controllers</a>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link active" href="https://gitlab.com/mkhizeryounas/shopdesk-mini-php-framework" target="_BLANK"><i class="fa fa-gitlab"></i> Download</a>
                 </li>
                 <!-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

@@ -5,7 +5,10 @@ class Pages extends Controller{
         parent::__construct();
     }
     function index() {
-        $this->view('main', [
+        sd_redirect(sd_base_url('pages/docs'));
+    }
+    function docs() {
+        $this->view('docs', [
             'title' => 'Home',
         ]);
     }
